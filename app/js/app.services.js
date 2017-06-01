@@ -10,7 +10,7 @@ app
 
 		var getLocation = function(address){
 			
-			if(address == "" || address == undefined){
+			if(address == "" || address == undefined){				
 				return $q.reject();
 			}else{
 
@@ -36,9 +36,11 @@ app
 			}
 		}
 
-		var createMap = function(position, element){
-
+		var createMap = function(mapElement, position){
+			
 		}
+
+		
 
 		var resetMap = function(element){
 

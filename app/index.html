@@ -68,8 +68,9 @@
 			</div>
 		</section>		
 
-		<footer id="map" class="ac__map">
-			
+		<footer class="ac__map" id="map" ng-hide="!vm.latitude && !vm.longitude">
+			<ng-map center="[{{vm.latitude}},{{vm.longitude}}]" zoom="5"></ng-map>
+			{{vm.latitude}} {{vm.longitude}}
 		</footer>
 	</main>	
 
@@ -77,6 +78,8 @@
 	<script src="./bower_components/angular/angular.min.js"></script>
 	<script src="./bower_components/angular-route/angular-route.min.js"></script>
 	<script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="/bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js"></script>
 	<script src="./js/app.js"></script>
 	<script src="./js/app.services.js"></script>
 	<script src="./js/map.controller.js"></script>
