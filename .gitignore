@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.sass-cache
+ac-recruitment-ui-challenge-26dd7c2860b7
+node_modules
+app/bower_components

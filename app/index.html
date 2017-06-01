@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="acchallenge">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Avenue Code Challenge - Michael Haruo Nakashima</title>
+
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./bower_components/components-font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+	<main class="app ac " ng-controller="MapController as vm">
+		
+		<nav class="navbar fixed-top navbar-toggleable-md navbar-light sb-navbar">
+			</button>
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/">{{vm.title}}</a>			
+			</div>
+		</nav>
+
+		<section class="ac__form container-fluid">
+			<form class="" novalidate>
+			    <fieldset>			        
+			      	<div class="row-fluid">
+			      		
+			      		<div class="col-xs-12 col-12">
+			      			<div class="form-group">
+			      				<label for="">Digite o Host</label>
+			      				<input class="form-control" type="text" placeholder="Enter host location" ng-model="vm.ac_host" />
+			      			</div>
+			      		</div>
+
+			      		<div class="col-xs-12 col-sm-12">
+			      			
+			      			<button class="btn btn-primary" ng-click="vm.lookForHost('')">
+			      				<i class="fa fa-repeat"></i> Reset my Location
+			      			</button>
+			      			
+			      			<button class="btn btn-primary" ng-click="vm.lookForHost('home')">
+			      				<i class="fa fa-map-marker"></i> My Location
+			      			</button>
+
+			      			<button class="btn btn-primary" ng-click="vm.lookForHost(vm.ac_host)">
+			      				<i class="fa fa-search"></i> Locate
+			      			</button>		      			
+							
+			      		</div>			      		
+
+			      		<div ng-bind="vm.ac_host"></div>
+			      	</div>
+
+			    </fieldset>
+			</form>
+		</section>
+
+		<section class="ac__panel--position container-fluid">
+			<div class="ac_panel--indicator latitude" ng-hide="!vm.latitude || vm.latitude == 0"">
+				<h3>Latitude:</h3>
+
+				<span>{{vm.latitude}}</span>
+			</div>
+
+			<div class="ac_panel--indicator longitude" ng-hide="!vm.longitude || vm.longitude == 0">
+				<h3>Longitude:</h3>
+
+				<span>{{vm.longitude}}</span>
+			</div>
+		</section>		
+
+		<footer id="map" class="ac__map">
+			
+		</footer>
+	</main>	
+
+
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-route/angular-route.min.js"></script>
+	<script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/app.services.js"></script>
+	<script src="./js/map.controller.js"></script>
+</body>
+</html>
