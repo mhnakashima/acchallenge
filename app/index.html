@@ -21,20 +21,20 @@
 		</nav>
 
 		<section class="ac__form container-fluid">
-			<form class="" novalidate>
+			<form class="" name="ac_hostForm" novalidate >
 			    <fieldset>			        
 			      	<div class="row-fluid">
 			      		
 			      		<div class="col-xs-12 col-12">
 			      			<div class="form-group">
 			      				<label for="">Digite o Host</label>
-			      				<input class="form-control" type="text" placeholder="Enter host location" ng-model="vm.ac_host" />
-			      			</div>
+			      				<input class="form-control" name="ac_host" required placeholder="Enter host location" ng-model="vm.ac_host" ng-pattern="vm.urlRegex"  />
+			      			</div>			      			
 			      		</div>
 
 			      		<div class="col-xs-12 col-sm-12">
 			      			
-			      			<button class="btn btn-primary" ng-click="vm.lookForHost('')">
+			      			<button class="btn btn-primary" ng-click="vm.lookForHost()">
 			      				<i class="fa fa-repeat"></i> Reset my Location
 			      			</button>
 			      			
@@ -42,13 +42,12 @@
 			      				<i class="fa fa-map-marker"></i> My Location
 			      			</button>
 
-			      			<button class="btn btn-primary" ng-click="vm.lookForHost(vm.ac_host)">
+			      			<button class="btn btn-primary" ng-disabled="ac_hostForm.ac_host.$invalid" ng-click="vm.lookForHost(vm.ac_host)">
 			      				<i class="fa fa-search"></i> Locate
 			      			</button>		      			
 							
 			      		</div>			      		
-
-			      		<div ng-bind="vm.ac_host"></div>
+			      		
 			      	</div>
 
 			    </fieldset>

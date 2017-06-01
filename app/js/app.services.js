@@ -11,7 +11,7 @@ app
 		var getLocation = function(address){
 			
 			if(address == "" || address == undefined){
-				//resetMap
+				return $q.reject();
 			}else{
 
 				if(address == "home"){
