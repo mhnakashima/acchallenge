@@ -55,22 +55,23 @@
 		</section>
 
 		<section class="ac__panel--position container-fluid">
-			<div class="ac_panel--indicator latitude" ng-hide="!vm.latitude || vm.latitude == 0"">
+			<div class="ac_panel--indicator latitude" ng-hide="!vm.latitude || !vm.longitude">
 				<h3>Latitude:</h3>
 
 				<span>{{vm.latitude}}</span>
 			</div>
 
-			<div class="ac_panel--indicator longitude" ng-hide="!vm.longitude || vm.longitude == 0">
+			<div class="ac_panel--indicator longitude" ng-hide="!vm.latitude || !vm.longitude">
 				<h3>Longitude:</h3>
 
 				<span>{{vm.longitude}}</span>
 			</div>
 		</section>		
 
-		<footer class="ac__map" id="map" ng-hide="!vm.latitude && !vm.longitude">
-			<ng-map center="[{{vm.latitude}},{{vm.longitude}}]" zoom="5"></ng-map>
-			{{vm.latitude}} {{vm.longitude}}
+		<footer class="ac__map" id="map" ng-hide="!vm.latitude || !vm.longitude" >
+			<ng-map center="[{{vm.latitude}},{{vm.longitude}}]" zoom="14">
+				<marker position="{{marker.latitude}},{{marker.longitude}}" animation="Animation.BOUNCE" centered="true" ng-repeat="marker in vm.markers"></marker>
+			</ng-map>			
 		</footer>
 	</main>	
 
