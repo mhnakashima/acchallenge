@@ -46,6 +46,92 @@
 /* =SITE */
 body {
   font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Lato", "Helvetica", "Arial" , sans-serif !important;
-  font-size: 10px; }
+  font-size: 10px;
+  font-weight: lighter; }
+  @media only screen and (max-width: 480px) {
+    body {
+      overflow-y: auto; } }
+  @media only screen and (min-width: 767px) {
+    body {
+      overflow: hidden; } }
+
+/* 
+	=Components 
+*/
+.ac__panel, .ac__form, .ac__panel--position {
+  float: left;
+  height: 100vh;
+  width: 50vw;
+  padding: 15px;
+  color: #fff; }
+  @media only screen and (max-width: 480px) {
+    .ac__panel, .ac__form, .ac__panel--position {
+      width: 100vw; } }
+
+.ac__form {
+  background-color: #DB7700; }
+  @media only screen and (min-width: 767px) {
+    .ac__form {
+      width: 30vw; } }
+
+.ac__panel--position {
+  background-color: #ccc; }
+  @media only screen and (min-width: 767px) {
+    .ac__panel--position {
+      width: 70vw; } }
+
+/* 
+	=brand 
+*/
+.ac__brand {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: lighter;
+  text-align: center; }
+  .ac__brand:hover {
+    color: #fff;
+    text-decoration: none; }
+
+/* 
+	=Inputs 
+*/
+.ac__input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem; }
+  .ac__input:focus {
+    border: none;
+    outline: 0; }
+  .ac__input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase; }
+  .ac__input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase; }
+  .ac__input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase; }
+  .ac__input:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase; }
+
+/* 
+	=Misc
+*/
+.form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px; }
+
+label {
+  font-size: 1.2rem; }
 
 /*# sourceMappingURL=styles.css.map */

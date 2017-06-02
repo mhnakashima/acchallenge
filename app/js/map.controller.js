@@ -6,7 +6,7 @@ app.
 		
 		var map = this;
 		
-		map.title = "sgf test";
+		map.title = "Geolocation";
 		map.urlRegex = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
 		map.latitude = 0;
 		map.longitude = 0;
